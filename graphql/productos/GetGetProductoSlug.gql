@@ -1,0 +1,64 @@
+query GetGetProductoSlug($slug:String){
+  GetGetProductoSlug(slug:$slug){
+    
+      id
+      nombre
+      slug
+      descripcionCorta
+      descripcionLarga
+      foto_real {
+        id
+        nombre
+        url
+      }
+      open_graph {
+        id
+        nombre
+        url
+      }
+      galeria {
+        id
+        nombre
+        url
+      }
+      keywords
+      favoritos
+      estado
+      categoria_producto_id
+      created_at
+      updated_at
+      data {
+        id
+        nombre
+        slug
+        estado
+        keywords
+        descripcion
+        imagen{
+          id
+          nombre
+          url
+        }
+        open_graph{
+           id
+          nombre
+          url
+        }
+        created_at
+        updated_at
+      }
+      ProductoTallas {
+        id
+        precio_real
+        precio_descuento
+        stock_minimo
+        stock_real
+        talla_id
+        Talla{
+          id
+          nombreTalla
+        }
+      
+    }
+  }
+}
